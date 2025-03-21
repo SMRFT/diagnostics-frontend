@@ -877,7 +877,7 @@ function Profile() {
 
     try {
       const response = await axios.post("http://127.0.0.1:8000/create_employee/", profileData, {
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "authorization":"test", "data-code":"global" },
       })
       console.log("Profile Created:", response.data)
     } catch (error) {
